@@ -222,15 +222,10 @@ function initializeTrackingSystem() {
     // Demo data for tracking requests
     const demoRequests = {
       "cliente@exemplo.com": {
-        id: "ELX2025001",
         company: "Empresa Exemplo Ltda.",
-        type: "Website Corporativo",
         date: "15/09/2025",
         status: "pending", // pending, approved, rejected
-        timeline: [
-          { date: "15/09/2025", content: "Solicitação recebida" },
-          { date: "16/09/2025", content: "Solicitação em análise pela equipe técnica" },
-        ],
+
       },
       "outro@cliente.com": {
         id: "ELX2025002",
@@ -238,12 +233,6 @@ function initializeTrackingSystem() {
         type: "Sistema Personalizado",
         date: "10/09/2025",
         status: "approved",
-        timeline: [
-          { date: "10/09/2025", content: "Solicitação recebida" },
-          { date: "12/09/2025", content: "Solicitação em análise pela equipe técnica" },
-          { date: "14/09/2025", content: "Solicitação aprovada" },
-          { date: "15/09/2025", content: "Contrato enviado para assinatura" },
-        ],
       },
       "terceiro@empresa.com": {
         id: "ELX2025003",
@@ -251,11 +240,6 @@ function initializeTrackingSystem() {
         type: "Aplicativo Mobile",
         date: "05/09/2025",
         status: "rejected",
-        timeline: [
-          { date: "05/09/2025", content: "Solicitação recebida" },
-          { date: "07/09/2025", content: "Solicitação em análise pela equipe técnica" },
-          { date: "10/09/2025", content: "Solicitação recusada - Fora do escopo atual" },
-        ],
       },
     }
 
