@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Contrate-nos - ElixirDigital{% endblock %}
+
+{% block content %}
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2 class="section-title">Contrate Nossos Serviços</h2>
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Entre em Contato</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Endereço</h4>
+                            <p>Av. Paulista, 1000<br>São Paulo, SP<br>01310-100</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Telefone</h4>
+                            <p>+55 (11) 9999-9999<br>Segunda a Sexta, 9h às 18h</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>E-mail</h4>
+                            <p>contato@elixirdigital.com<br>projetos@elixirdigital.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Solicite um Trabalho</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="company" class="form-label required">Nome da Empresa</label>
+                        <input type="text" id="company" class="form-input" placeholder="Digite o nome da sua empresa" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label required">E-mail Empresarial</label>
+                        <input type="email" id="email" class="form-input" placeholder="seu.email@empresa.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label required">Telefone para Contato</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="(11) 99999-9999" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="technologies" class="form-label">Tecnologias Preferenciais (Opcional)</label>
+                        <input type="text" id="technologies" class="form-input" placeholder="Ex: React, Node.js, Python, etc.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description" class="form-label required">Descrição do Projeto</label>
+                        <textarea id="description" class="form-textarea" placeholder="Descreva detalhadamente seu projeto, objetivos, funcionalidades desejadas e prazos..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Enviar Solicitação</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

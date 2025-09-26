@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ElixirDigital{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-text">ElixirDigital</div>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-menu">
+            {% block navigation %}
+            <a href="{{url_for('index')}}">Home (Sobre Nós)</a>
+            <a href="{{url_for('forms')}}">Contrate-nos</a>
+            <a href="{{url_for('blog')}}">Blog</a>
+            <a href="{{url_for('feedback')}}">Deixe seu Feedback</a>
+            <a href="{{url_for('acompanhamento')}}">Acompanhe sua solicitação</a>
+            {% endblock %}
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            {% block social_links %}
+           
+            {% endblock %}
+            
+            <div class="theme-toggle">
+                <span>Modo Escuro</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Modo Claro</span>
+            </div>
+            
+            <div class="copyright">
+                © 2025 ElixirDigital. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

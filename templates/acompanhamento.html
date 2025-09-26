@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Acompanhe sua Solicitação - ElixirDigital{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Acompanhe sua Solicitação</h1>
+            <p>Digite o e-mail utilizado na solicitação para verificar o status do seu projeto com a ElixirDigital.</p>
+        </div>
+    </section>
+
+    <!-- Tracking Form Section -->
+    <section class="tracking-section">
+        <h2 class="section-title">Verificar Status</h2>
+        <div class="form-container">
+            <form class="tracking-form" id="trackingForm">
+                <div class="form-group">
+                    <label for="email" class="form-label required">E-mail da Solicitação</label>
+                    <input type="email" id="email" class="form-input" placeholder="seu.email@exemplo.com" required>
+                </div>
+                
+                <button type="submit" class="submit-button">Verificar Status</button>
+            </form>
+            
+            <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-circle"></i> Nenhuma solicitação encontrada para este e-mail.
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Section -->
+    <section class="status-section" id="statusSection">
+        <div class="status-container">
+            <div class="status-header">
+                <h2>Solicitação #ELX2025001</h2>
+                <div class="status-badge" id="statusBadge">Em Análise</div>
+            </div>
+            
+            <div class="request-details">
+                <div class="detail-item">
+                    <span class="detail-label">E-mail:</span>
+                    <span class="detail-value" id="requestEmail">cliente@exemplo.com</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Empresa:</span>
+                    <span class="detail-value" id="requestCompany">Empresa Exemplo Ltda.</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Tipo de Projeto:</span>
+                    <span class="detail-value" id="requestType">Website Corporativo</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Data de Envio:</span>
+                    <span class="detail-value" id="requestDate">15/09/2025</span>
+                </div>
+            </div>
+            
+            <div class="status-timeline">
+                <h3 class="timeline-title">Histórico de Status</h3>
+                <div class="timeline" id="statusTimeline">
+                    <!-- Timeline items will be added dynamically -->
+                </div>
+            </div>
+            
+            <a href="{{url_for('acompanhamento')}}" class="back-button">Nova Consulta</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block social_links %}
+<div class="social-links">
+    <a href="https://facebook.com/elixirdigital" class="social-link" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com/elixirdigital" class="social-link" target="_blank">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://instagram.com/elixirdigital" class="social-link" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://linkedin.com/company/elixirdigital" class="social-link" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+</div>
+{% endblock %}
