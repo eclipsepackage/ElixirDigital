@@ -63,7 +63,15 @@
         </div>
     </footer>
 
+    <!-- Load JavaScript modules -->
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/forms.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/rating.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/tracking.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
     {% block scripts %}
     {% endblock %}
 </body>
